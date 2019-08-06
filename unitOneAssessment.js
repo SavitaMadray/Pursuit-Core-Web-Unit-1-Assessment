@@ -1,40 +1,86 @@
 let assert = require('assert')
 
 // Question One:
-
 // Write a function called isOdd that returns whether or not a number is odd.
 // If something that is not a number is passed in, return false.
 
-
+function isOdd (num) {
+  let str = ""
+  let nums = 3
+  if(num % 2 === 1){
+    return true
+  }else if (num % 2 === 0 || typeof num !== typeof nums) {
+    return false
+  }else{
+     return false
+  }
+  }
 // Uncomment out the next line to test your solution
-// runQ1Tests()
-
+runQ1Tests()
 
 // Question Two:
-
 // Write a function called numberOfDigits that returns how many digits are in a given number
 
+function numberOfDigits(num){
+  str = ""
+  num = num + str
+  return num.length
+}
+//console.log(numberOfDigits(4));
 // Uncomment out the next line to test your solution
-// runQ2Tests()
+runQ2Tests()
 
 // Question Three:
-
 // Write a function called disemvowel that removes all of the vowels from a string.
 // Treat y as a consonant, not a vowel
 
+function disemvowel (str) {
+  let arr = str.split('')
+  for(let i = 0; i < str.length; i++){
+    if(arr[i] === "a" || arr[i] === "e" || arr[i] === "i" || arr[i] === "o" ||
+       arr[i] === "u" || arr[i] === "A" || arr[i] === "E" || arr[i] === "I" || arr[i] === "O" || arr[i] === "U"){
+      arr[i] = ""
+    }
+  }
+  return arr.join('')
+}
+
 // Uncomment out the next line to test your solution
-// runQ3Tests()
+ runQ3Tests()
 
 // Question Four:
 // Write a function called secondSmallest that returns the second smallest number in an array
 
+//  let arry = [9,5,18,2,87]
+//
+// function secondSmallest(arr){
+//   let first = arr[0]
+//   let second = 0
+//   for(let i = 1; i < arr.length; i++){
+//     if( first < arr[i]){
+//           first = arr[i]
+//         second = first[i]
+//     }
+//   }return second
+// }
+//
+//  console.log(secondSmallest(arry));
+
 // Uncomment out the next line to test your solution
-// runQ4Tests()
+//runQ4Tests()
 
 // Question Five:
 // Write a function called getLocations that takes in an array of objects that look like the array below,
 // and returns an array of the strings corresponding to the value of the location property
 // The output should be in the same order as the input
+
+function getLocations (arr) {
+  newArr = []
+    for(let i = 0; i < arr.length; i++){
+      newArr.push(arr[i].location)
+    }
+    return newArr
+}
 
 // Sample input:
 // [{location: "Algeria", population: 41}, {location: "Belize", population: 0.4}, {location: "China", population: 1386}, {location: "Denmark", population: 6}]
@@ -43,17 +89,32 @@ let assert = require('assert')
 // ["Algeria", "Belize", "China", "Denmark"]
 
 // Uncomment out the next line to test your solution
-// runQ5Tests()
+ runQ5Tests()
 
 
 // Question Six:
 
-// Write a function called onlyOddStrings that takes in an array of strings as input and returns an array that only includes strings with an odd number of characters
+// Write a function called onlyOddStrings that takes in an array of strings as input and returns an array that only includes strings with
+//an odd number of characters
 // Your function should use a higher-ordered function (e.g map, filter, reduce, every, sort) in its implementation
 
-// Uncomment out the next line to test your solution
-// runQ6Tests()
+function onlyOddStrings (arr) {
+    newArr = []
+  arr.map((el) => {
+      if (el.length % 2 !== 0){
+        newArr.push(el)
+      }
 
+  })
+  return newArr
+}
+
+// Uncomment out the next line to test your solution
+ runQ6Tests()
+
+// function onlyOddStrings (arr) {
+//
+// }
 
 // Question Seven:
 
